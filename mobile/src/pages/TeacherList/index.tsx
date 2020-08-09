@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, KeyboardAvoidingView } from 'react-native';
 import { ScrollView, TextInput, BorderlessButton, RectButton } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-community/async-storage';
@@ -52,7 +52,11 @@ function TeacherList() {
    }
 
    return (
-      <View style={styles.container}>
+      <KeyboardAvoidingView
+         behavior="position"
+         keyboardVerticalOffset={-35}
+         style={styles.container}
+      >
          <PageHeader
             title="Proffys disponíveis"
             headerRight={
@@ -119,7 +123,7 @@ function TeacherList() {
                );
             })}
          </ScrollView>
-      </View>
+      </KeyboardAvoidingView>
    );
 }
 
