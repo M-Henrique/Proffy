@@ -1,4 +1,4 @@
-<h1 align="center"><img alt="Logo" src="./web/src/assets/prints/Proffy-Apresentação.png" width="200px" /></h1>
+<h1 align="center"><img alt="Logo" src="./web/src/assets/prints/Proffy-Apresentação.png" /></h1>
 
 ## :bookmark: Table of contents
 - [About the Project](#clipboard-about-the-project)
