@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, KeyboardAvoidingView } from 'react-native';
+import { View, Text, KeyboardAvoidingView, Picker } from 'react-native';
 import { ScrollView, TextInput, BorderlessButton, RectButton } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-community/async-storage';
@@ -17,8 +17,8 @@ function TeacherList() {
    const [favorites, setFavorites] = useState<number[]>([]);
    const [isFiltersVisible, setIsFiltersVisible] = useState(false);
 
-   const [subject, setSubject] = useState('');
-   const [week_day, setWeekDay] = useState('');
+   const [subject, setSubject] = useState(-1);
+   const [week_day, setWeekDay] = useState(-1);
    const [time, setTime] = useState('');
 
    function loadFavorites() {
@@ -68,24 +68,45 @@ function TeacherList() {
             {isFiltersVisible && (
                <View style={styles.searchForm}>
                   <Text style={styles.label}>Matéria</Text>
-                  <TextInput
-                     style={styles.input}
-                     value={subject}
-                     onChangeText={(text) => setSubject(text)}
-                     placeholder="Qual a matéria?"
-                     placeholderTextColor="#c1bccc"
-                  ></TextInput>
+                  <View style={styles.input}>
+                     <Picker
+                        selectedValue={subject}
+                        onValueChange={(subjectItem, index) => setSubject(subjectItem)}
+                        style={{ width: 270 }}
+                     >
+                        <Picker.Item label="Matéria" value="-1" />
+                        <Picker.Item label="Artes" value="Artes" />
+                        <Picker.Item label="Biologia" value="Biologia" />
+                        <Picker.Item label="Educação Física" value="Educação Física" />
+                        <Picker.Item label="Física" value="Física" />
+                        <Picker.Item label="Geografia" value="Geografia" />
+                        <Picker.Item label="História" value="História" />
+                        <Picker.Item label="Literatura" value="Literatura" />
+                        <Picker.Item label="Matemática" value="Matemática" />
+                        <Picker.Item label="Português" value="Português" />
+                        <Picker.Item label="Química" value="Química" />
+                     </Picker>
+                  </View>
 
                   <View style={styles.inputGroup}>
                      <View style={styles.inputBlock}>
                         <Text style={styles.label}>Dia da semana</Text>
-                        <TextInput
-                           style={styles.input}
-                           value={week_day}
-                           onChangeText={(text) => setWeekDay(text)}
-                           placeholder="Qual o dia?"
-                           placeholderTextColor="#c1bccc"
-                        ></TextInput>
+                        <View style={styles.input}>
+                           <Picker
+                              selectedValue={week_day}
+                              onValueChange={(day, index) => setWeekDay(day)}
+                              style={{ width: 130 }}
+                           >
+                              <Picker.Item label="Dia" value="-1" />
+                              <Picker.Item label="Domingo" value="0" />
+                              <Picker.Item label="Segunda-feira" value="1" />
+                              <Picker.Item label="Terça-feira" value="2" />
+                              <Picker.Item label="Quarta-feira" value="3" />
+                              <Picker.Item label="Quinta-feira" value="4" />
+                              <Picker.Item label="Sexta-feira" value="5" />
+                              <Picker.Item label="Sábado" value="6" />
+                           </Picker>
+                        </View>
                      </View>
 
                      <View style={styles.inputBlock}>
@@ -94,8 +115,8 @@ function TeacherList() {
                            style={styles.input}
                            value={time}
                            onChangeText={(text) => setTime(text)}
-                           placeholder="Em qual horário?"
-                           placeholderTextColor="#c1bccc"
+                           placeholder="Horário"
+                           placeholderTextColor="#000"
                         ></TextInput>
                      </View>
                   </View>
