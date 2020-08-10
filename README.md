@@ -76,9 +76,6 @@ Wait a moment and an expo screen will open. Open the Expo app at your cellphone 
   
   In the mobile version, the "give classes" option will merely request you to fill in the form of the web version (feature still to be implemented). The "study" tab will work just like in the web, with the additional option of favoriting teachers.
   
-  <img align="left" alt="Listagem de casos" src="Prints/BTH-Listagem-Casos.jpeg" width="40%">
-  <img align="right" alt="Detalhes do caso" src="Prints/BTH-Detalhes-Caso.jpeg" width="40%">
-  
   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   
 ## :information_source: License
