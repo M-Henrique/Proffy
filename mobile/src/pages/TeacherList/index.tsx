@@ -54,7 +54,7 @@ function TeacherList() {
    return (
       <KeyboardAvoidingView
          behavior="position"
-         keyboardVerticalOffset={-35}
+         keyboardVerticalOffset={70}
          style={styles.container}
       >
          <PageHeader
