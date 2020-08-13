@@ -38,6 +38,9 @@ After cloning or downloading the project in your local machine, navigate to `Mob
   # Install all necessary dependencies
   $ npm install
   
+  #Instantiate the local database
+  $npx run migrate:lastest --knexfile knefile.ts
+  
   # Run the server
   $ npm start
   ```
