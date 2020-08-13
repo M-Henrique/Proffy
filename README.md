@@ -69,8 +69,8 @@ Wait a moment and an expo screen will open. Open the Expo app at your cellphone 
   In the web version of the app, you can choose between "study" and "give classes". In the first case, you will be presented with filters, respective to the subject, week day and hour in which you wish to have your classes. Once you fill those infos, the list of teachers corresponding to the given filters will appear, each containing all of their information, along with their price, and a button to contact the instructor directly. In the second case, a form will be given for your filling, in which all of the already mentioned info must be provided in order to complete the register process.
   <br />
   
-  <img align="left" width="30%" height="70%" alt="Cadastro Profs" src="web/src/assets/prints/Proffy-Cadastro-Profs.png">
-  <img align="right" width="60%" height="70%" alt="Listagem Profs" src="web/src/assets/prints/Proffy-Listagem-Profs.png">
+  <img align="left" width="30%" height="500" alt="Cadastro Profs" src="web/src/assets/prints/Proffy-Cadastro-Profs.png">
+  <img align="right" width="60%" height="500" alt="Listagem Profs" src="web/src/assets/prints/Proffy-Listagem-Profs.png">
   
   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   
